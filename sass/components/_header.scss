@@ -1,0 +1,120 @@
+// Шапка
+
+.main-nav{
+    @include flex-align;
+}
+
+.site-nav{
+    display: flex;
+    margin-left: 86px;
+
+    .item:not(:last-child){
+        margin-right: 50px;
+    }
+}
+
+.contacts-nav{
+    display: flex;
+    margin-left: auto;
+
+    & .item:not(:first-child){
+        margin-left: 30px;
+    }
+
+    & .link{
+        @include flex-align;
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 1.15;
+        letter-spacing: 0.02em;
+        color: $main-text-color;
+        
+        transition: $main-animation;
+
+    }
+
+    & .link:hover, 
+    & .link:focus{
+        color: $hover-color;
+    }
+
+}
+
+.logo{
+    font-family: Raleway, sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.2;
+    letter-spacing: 0.03em;
+    
+    color: #000000;
+}
+
+.web-logo{
+    padding-right: 5px;
+    color: $hover-color;
+}
+
+.site-nav .link{
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.15;
+    letter-spacing: 0.02em;
+    color: $secondary-text-color;
+
+    transition: $main-animation;
+
+    &:hover, &:focus{
+        color: $hover-color;
+    }
+
+    &.current{
+        position: relative;
+        color: $hover-color;
+    }
+
+    &.current::after{
+        position: absolute;
+        bottom: 0;
+
+        content: '';
+
+        display: block;
+        width: 100%;
+        height: 4px;
+        border-radius: 2px;
+        background-color: $hover-color;
+    }
+
+}
+
+.icon-envelope{
+    width: 16px;
+    height: 12px;
+    margin-right: 8px;
+    fill: currentColor;
+    transition: fill $main-animation;
+
+    .item.envelope:hover &{
+        fill: $hover-color;
+    }
+}
+
+.icon-phone{
+    width: 10px;
+    height: 15px;
+    margin-right: 8px;
+    fill: currentColor;
+    transition: fill $main-animation;
+
+    .item.phone:hover &{
+        fill: $hover-color;
+    }
+}

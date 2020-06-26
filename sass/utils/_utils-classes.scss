@@ -1,0 +1,39 @@
+// Утилитные классы для проекта
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}  
+
+body{
+    font-family: 'Roboto', sans-serif; 
+    color: $main-text-color;
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6, p{
+    margin-top: 0;
+    margin-bottom: 0em;
+}
+
+.list{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+}

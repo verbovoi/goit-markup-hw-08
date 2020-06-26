@@ -1,0 +1,88 @@
+.team{
+    background-color: $secondary-background-color;
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    & .team-title{
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        letter-spacing: 0.03em;
+    
+        color: $secondary-text-color;
+    }
+}
+
+.people-team{
+    display: flex;
+    margin-top: 50px;
+
+    & .item{
+        text-align: center;
+        padding-bottom: 24px;
+    
+        background-color: $main-background-color;
+        box-shadow: $shadow;
+    }
+    
+    & .item + .item{
+        margin-left: 30px;
+    }
+    
+    & .foto{
+        display: block;
+    }
+
+    & h3{
+        margin-top: 30px;
+    
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.18;
+        letter-spacing: 0.03em;
+    
+        color: $secondary-text-color;
+    }
+
+    & p{
+        margin-top: 10px;
+    
+        font-size: 16px;
+        line-height: 1.18;
+        letter-spacing: 0.03em;
+    }
+}
+
+.people-team .social-link{
+    margin-top: 30px;
+}
+
+.social-link>a{
+    @include flex-align-justify($display: inline-flex);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    transition: $main-animation;
+
+    .team &:hover,
+    .team &:focus{
+    background-color: $hover-color;
+    }
+}
+
+.social-icon{
+    width: 20px;
+    height: 20px;
+    fill: $social-link-color;
+    transition: $main-animation;
+
+    .team a:hover &,
+    .team a:focus &{
+    fill: $main-background-color;
+    }
+}
+
+
+
+

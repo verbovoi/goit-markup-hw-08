@@ -1,0 +1,12 @@
+// Миксины
+
+@mixin flex-align($display:flex, $align:center) {
+    display: $display;
+    align-items: $align;
+}
+
+@mixin flex-align-justify($display: flex, $align: center, $justify: center) {
+    display: $display;
+    align-items: $align;
+    justify-content: $justify;
+}

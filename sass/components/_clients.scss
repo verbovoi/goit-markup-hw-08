@@ -1,0 +1,49 @@
+.clients{
+    padding-top: 94px;
+    padding-bottom: 94px;
+
+    & h2{
+        font-size: 36px;
+        line-height: 1.16;
+        text-align: center;
+        letter-spacing: 0.03em;
+    
+        color: $secondary-text-color;
+    }
+}
+
+.partners{
+    display: flex;
+    margin-top: 50px;
+
+    & .item:not(:last-child){
+        margin-right: 30px;
+    }
+}
+
+.company-icon{
+    fill: $social-link-color;
+    transition: $main-animation;
+
+    .clients .item:hover &,
+    .clients .item:focus &{ 
+        fill: $hover-color;
+    }
+}
+
+.clients .item-link{
+    @include flex-align-justify;
+    width: 175px;
+    height: 90px;
+
+    transition: $main-animation;
+
+    border: 1px solid #AFB1B8;
+    border-radius: $radius;
+
+    &:hover,
+    &:focus{
+        border: 1px solid $hover-color;
+    }
+}
+
