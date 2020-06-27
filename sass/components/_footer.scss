@@ -1,128 +1,131 @@
 .footer {
-    background-color: $footer-background-color;
-    padding-top: 48px;
-    padding-bottom: 21px;
+  background-color: $footer-background-color;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
 
-    & .flex-container{
-        @include flex-align($align: baseline);
-        margin-bottom: 28px;
-    }
-    
-    .footer .flex-container{
+  .footer .flex-container {
     display: flex;
     margin-bottom: 28px;
     align-items: baseline;
-    }
+  }
 
-    & .logo{
-        font-size: 22px;
-        line-height: 1.18;
-        letter-spacing: 0.03em;
-    
-        color: $main-background-color;
-    }
-}
-
-.contact-info{
-    font-size: 14px;
-    line-height: 1.71;
+  & .logo {
+    font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.03em;
-
-    & .info{
-        margin-top: 10px;
-        color: $main-background-color;
-    }
-
-    & a{
-        color: rgba(255, 255, 255, 0.6);
-    }
-}
-
-.footer .follow{
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
 
     color: $main-background-color;
+  }
 }
 
-.social-container{
-    margin-left: 69px;
+.contact-info {
+  margin-top: 20px;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+
+  & .info:not(:last-child) {
+    margin-bottom: 8px;
+  }
+
+  & .info {
+    color: $main-background-color;
+  }
+
+  & a {
+    color: rgba(255, 255, 255, 0.6);
+  }
 }
 
-.social-links{
-    display: flex;
-    margin-top: 21px;
+.footer .follow {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 
-    & .item{
-        @include flex-align-justify($display: inline-flex);
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-    
-        transition: $main-animation;
-    
-        background-color: #43444D ;
-    }
-    
-    & .item:not(:last-child){
+  color: $main-background-color;
+}
+
+.social-container {
+  margin-top: 60px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+
+  & .item {
+    @include flex-align-justify($display: inline-flex);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+
+    transition: $main-animation;
+
+    background-color: #43444d;
+  }
+
+  & .item:not(:last-child) {
     margin-right: 10px;
-    }
+  }
 
-    & .item:hover,
-    &.item:focus{
-        background-color: $hover-color;
-    }
-}
-
-.social-links .social-icon{
-    width: 20px;
-    height: 20px;
-    fill: $main-background-color;
-}
-
-.subscribe-conteiner{
-    margin-left: auto;
-}
-
-.subscribe-form{
-    display: flex;
-    margin-top: 21px;
-}
-
-.subscribe-icon{
-    margin-left: 10px;
-}
-
-.email-form{
-    @include flex-align;
-    width: 358px;
-    height: 50px;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: $radius;
-    padding-left: 12px;
-    background-color: $footer-background-color;
-
-    font-size: 16px;
-    line-height: 1.83;
-    color: $main-background-color;
-}
-
-.footer .button{
-    @include flex-align-justify;
-    min-width: 200px;
-    margin-left: 12px;
-    border-radius: 4px;
-    padding: 0;
-    border: none;
-    
-    font-weight: 900;
-    font-size: 16px;
-    line-height: 1.87;
-    letter-spacing: 0.06em;
-
-    color: $main-background-color;
+  & .item:hover,
+  &.item:focus {
     background-color: $hover-color;
+  }
+}
+
+.social-links .social-icon {
+  width: 20px;
+  height: 20px;
+  fill: $main-background-color;
+}
+
+.subscribe-conteiner {
+  margin-top: 60px;
+}
+
+.subscribe-form {
+  margin-top: 20px;
+}
+
+.subscribe-icon {
+  margin-left: 10px;
+}
+
+.email-form {
+  @include flex-align;
+  width: 100%;
+  height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: $radius;
+  padding-left: 12px;
+  background-color: $footer-background-color;
+
+  font-size: 16px;
+  line-height: 1.83;
+  color: $main-background-color;
+}
+
+.footer .button {
+  @include flex-align-justify;
+  min-width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 4px;
+  padding: 0px 29px;
+  border: none;
+
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+
+  color: $main-background-color;
+  background-color: $hover-color;
 }
