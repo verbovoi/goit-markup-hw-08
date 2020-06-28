@@ -3,8 +3,15 @@
 .main-nav {
   position: relative;
   @include flex-align;
-  height: 60px;
-  border-bottom: 1px solid #ececec;
+
+  @media screen and (max-width: 767px) {
+    height: 60px;
+    border-bottom: 1px solid #ececec;
+  }
+
+  @media screen and (min-width: 768px) {
+    height: 80px;
+  }
 }
 
 .logo {
@@ -15,6 +22,11 @@
   letter-spacing: 0.03em;
 
   color: #000000;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.19;
+  }
 }
 
 .web-logo {
@@ -35,6 +47,10 @@
   &.is-open .icon-menu {
     display: none;
   }
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 
 .menu-icon {
@@ -49,40 +65,72 @@
 }
 
 .menu-container {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  width: 100%;
-  padding-top: 60px;
-  padding-bottom: 60px;
-  text-align: center;
-  opacity: 0;
-  pointer-events: none;
-  transition: opacity $main-animation;
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity $main-animation;
 
-  background-color: $main-background-color;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
-    0px 4px 8px rgba(0, 0, 0, 0.04);
+    background-color: $main-background-color;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08),
+      0px 4px 8px rgba(0, 0, 0, 0.04);
 
-  .button-menu.is-open ~ & {
-    opacity: 1;
-    pointer-events: auto;
+    .button-menu.is-open ~ & {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    height: 100%;
+    margin-left: auto;
   }
 }
 
-.site-nav .item:not(:last-child) {
-  margin-bottom: 40px;
+.site-nav {
+  @media screen and (max-width: 767px) {
+    & .item:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    @include flex-align;
+
+    & .item:not(:last-child) {
+      margin-right: 50px;
+    }
+  }
 }
 
 .site-nav .link {
-  display: inline-block;
   font-weight: 500;
-  font-size: 18px;
-  line-height: 1.17;
   letter-spacing: 0.02em;
   color: $secondary-text-color;
 
   transition: $main-animation;
+
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+
+    font-size: 18px;
+    line-height: 1.17;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    font-size: 14px;
+    line-height: 1.14;
+  }
 
   &:hover,
   &:focus {
@@ -105,18 +153,43 @@
     height: 4px;
     border-radius: 2px;
     background-color: $hover-color;
+
+    @media screen and (min-width: 768px) {
+      bottom: 0;
+    }
   }
 }
 .contacts-nav {
-  margin-top: 60px;
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
 
-  & .item {
-    display: flex;
-    flex-direction: column;
+    & .item {
+      display: flex;
+      flex-direction: column;
+    }
+
+    & .item + .item {
+      margin-top: 16px;
+    }
   }
 
-  & .item + .item {
-    margin-top: 16px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    margin-left: 84px;
+
+    & .item + .item {
+      margin-top: 10px;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    @include flex-align;
+    margin-left: 305px;
+
+    & .item + .item {
+      margin-left: 30px;
+    }
   }
 
   & .link {
@@ -127,6 +200,16 @@
     color: $main-text-color;
 
     transition: $main-animation;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+      @include flex-align;
+      font-size: 12px;
+    }
+
+    @media screen and (min-width: 1200px) {
+      font-size: 14px;
+      line-height: 1.14;
+    }
   }
 
   & .link:hover,
