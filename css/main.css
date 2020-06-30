@@ -809,6 +809,12 @@ button {
           box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
 }
 
+@media screen and (min-width: 1200px) {
+  .modal {
+    max-width: 528px;
+  }
+}
+
 .modal-close-button {
   position: absolute;
   top: 8px;
@@ -827,9 +833,15 @@ button {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: #ffffff;
-  -webkit-box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
   padding: 0;
+}
+
+.close-icon {
+  fill: currentColor;
+}
+
+.close-icon:hover, .close-icon:focus {
+  fill: #2196f3;
 }
 
 .modal-title {
@@ -839,6 +851,12 @@ button {
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: #212121;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-title {
+    line-height: 1.15;
+  }
 }
 
 .form-field {
@@ -973,6 +991,13 @@ button {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+}
+
+@media screen and (min-width: 1200px) {
+  .checkbox-label {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox-icon {
@@ -1321,6 +1346,13 @@ button {
   padding-bottom: 60px;
 }
 
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
 .clients h2 {
   font-size: 28px;
   line-height: 1.18;
@@ -1329,24 +1361,58 @@ button {
   color: #212121;
 }
 
+@media screen and (min-width: 1200px) {
+  .clients h2 {
+    font-size: 36px;
+    line-height: 1.17;
+  }
+}
+
 .partners {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   margin-top: 30px;
 }
 
-.partners .item {
-  width: calc((100% - 2 * 15px) / 2);
+@media screen and (max-width: 767px) {
+  .partners .item {
+    width: calc((100% - 2 * 15px) / 2);
+  }
+  .partners .item:nth-child(-n + 4) {
+    margin-bottom: 30px;
+  }
+  .partners .item:nth-child(odd) {
+    margin-right: 30px;
+  }
 }
 
-.partners .item:nth-child(-n + 4) {
-  margin-bottom: 30px;
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .partners {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .partners .item {
+    width: calc((100% - 2 * 30px) / 3);
+  }
+  .partners .item:nth-child(-n + 3) {
+    margin-bottom: 30px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .partners {
+    margin-top: 50px;
+  }
+  .partners .item {
+    width: calc((100% - 5 * 30px) / 6);
+  }
+  .partners .item:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .company-icon {
@@ -1388,14 +1454,10 @@ button {
   text-align: center;
 }
 
-.footer .footer .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 28px;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+@media screen and (min-width: 1200px) {
+  .footer {
+    text-align: start;
+  }
 }
 
 .footer .logo {
@@ -1403,6 +1465,45 @@ button {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer .tablet-flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .footer .tablet-flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .contact-info {
@@ -1424,6 +1525,12 @@ button {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (min-width: 1200px) {
+  .contact-info .info:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
 .footer .follow {
   font-weight: 700;
   font-size: 14px;
@@ -1433,8 +1540,16 @@ button {
   color: #ffffff;
 }
 
-.social-container {
-  margin-top: 60px;
+@media screen and (max-width: 767px) {
+  .social-container {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .social-container {
+    margin-left: 69px;
+  }
 }
 
 .social-links {
@@ -1479,12 +1594,28 @@ button {
   fill: #ffffff;
 }
 
-.subscribe-conteiner {
-  margin-top: 60px;
+@media screen and (max-width: 1199px) {
+  .subscribe-conteiner {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-conteiner {
+    margin-left: auto;
+  }
 }
 
 .subscribe-form {
   margin-top: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .subscribe-icon {
@@ -1509,6 +1640,20 @@ button {
   color: #ffffff;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .email-form {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .email-form {
+    width: 358px;
+  }
+}
+
 .footer .button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1521,7 +1666,6 @@ button {
           justify-content: center;
   min-width: 200px;
   height: 50px;
-  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
@@ -1533,5 +1677,17 @@ button {
   letter-spacing: 0.06em;
   color: #ffffff;
   background-color: #2196f3;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer .button {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .button {
+    margin-left: 12px;
+  }
 }
 /*# sourceMappingURL=main.css.map */

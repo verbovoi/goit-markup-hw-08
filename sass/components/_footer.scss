@@ -4,10 +4,8 @@
   padding-bottom: 60px;
   text-align: center;
 
-  .footer .flex-container {
-    display: flex;
-    margin-bottom: 28px;
-    align-items: baseline;
+  @media screen and (min-width: 1200px) {
+    text-align: start;
   }
 
   & .logo {
@@ -16,6 +14,31 @@
     letter-spacing: 0.03em;
 
     color: $main-background-color;
+
+    @media screen and (min-width: 1200px) {
+      font-size: 26px;
+      line-height: 1.19;
+    }
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    & .tablet-flex-container {
+      display: flex;
+      justify-content: space-around;
+      align-items: baseline;
+    }
+  }
+
+  @media screen and (min-width: 1200px) {
+    & .flex-container {
+      display: flex;
+      align-items: baseline;
+    }
+
+    & .tablet-flex-container {
+      display: flex;
+      align-items: baseline;
+    }
   }
 }
 
@@ -36,6 +59,12 @@
   & a {
     color: rgba(255, 255, 255, 0.6);
   }
+
+  @media screen and (min-width: 1200px) {
+    & .info:not(:last-child) {
+      margin-bottom: 8px;
+    }
+  }
 }
 
 .footer .follow {
@@ -49,7 +78,13 @@
 }
 
 .social-container {
-  margin-top: 60px;
+  @media screen and (max-width: 767px) {
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 69px;
+  }
 }
 
 .social-links {
@@ -85,11 +120,21 @@
 }
 
 .subscribe-conteiner {
-  margin-top: 60px;
+  @media screen and (max-width: 1199px) {
+    margin-top: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: auto;
+  }
 }
 
 .subscribe-form {
   margin-top: 20px;
+
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
 }
 
 .subscribe-icon {
@@ -108,13 +153,22 @@
   font-size: 16px;
   line-height: 1.83;
   color: $main-background-color;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 358px;
+  }
 }
 
 .footer .button {
   @include flex-align-justify;
   min-width: 200px;
   height: 50px;
-  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
@@ -128,4 +182,12 @@
 
   color: $main-background-color;
   background-color: $hover-color;
+
+  @media screen and (max-width: 1199px) {
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 12px;
+  }
 }

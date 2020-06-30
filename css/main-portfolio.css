@@ -857,14 +857,10 @@ button {
   text-align: center;
 }
 
-.footer .footer .flex-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 28px;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+@media screen and (min-width: 1200px) {
+  .footer {
+    text-align: start;
+  }
 }
 
 .footer .logo {
@@ -872,6 +868,45 @@ button {
   line-height: 1.17;
   letter-spacing: 0.03em;
   color: #ffffff;
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .logo {
+    font-size: 26px;
+    line-height: 1.19;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer .tablet-flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+  .footer .tablet-flex-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
 }
 
 .contact-info {
@@ -893,6 +928,12 @@ button {
   color: rgba(255, 255, 255, 0.6);
 }
 
+@media screen and (min-width: 1200px) {
+  .contact-info .info:not(:last-child) {
+    margin-bottom: 8px;
+  }
+}
+
 .footer .follow {
   font-weight: 700;
   font-size: 14px;
@@ -902,8 +943,16 @@ button {
   color: #ffffff;
 }
 
-.social-container {
-  margin-top: 60px;
+@media screen and (max-width: 767px) {
+  .social-container {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .social-container {
+    margin-left: 69px;
+  }
 }
 
 .social-links {
@@ -948,12 +997,28 @@ button {
   fill: #ffffff;
 }
 
-.subscribe-conteiner {
-  margin-top: 60px;
+@media screen and (max-width: 1199px) {
+  .subscribe-conteiner {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-conteiner {
+    margin-left: auto;
+  }
 }
 
 .subscribe-form {
   margin-top: 20px;
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .subscribe-icon {
@@ -978,6 +1043,20 @@ button {
   color: #ffffff;
 }
 
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .email-form {
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .email-form {
+    width: 358px;
+  }
+}
+
 .footer .button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -990,7 +1069,6 @@ button {
           justify-content: center;
   min-width: 200px;
   height: 50px;
-  margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
   border-radius: 4px;
@@ -1002,5 +1080,17 @@ button {
   letter-spacing: 0.06em;
   color: #ffffff;
   background-color: #2196f3;
+}
+
+@media screen and (max-width: 1199px) {
+  .footer .button {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer .button {
+    margin-left: 12px;
+  }
 }
 /*# sourceMappingURL=main-portfolio.css.map */

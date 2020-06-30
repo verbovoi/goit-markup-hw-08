@@ -309,44 +309,46 @@
     <footer class="footer">
       <div class="container">
         <div class="flex-container">
-          <div>
-            <a href="./index.html" class="logo"
-              ><span class="web-logo">Web</span>Studio</a
-            >
-            <ul class="contact-info list">
-              <li class="info">г. Киев, пр-т Леси Украинки, 26</li>
-              <li class="info"><a href="">info@example.com</a></li>
-              <li class="info"><a href="">+38 099 111 11 11</a></li>
-            </ul>
-          </div>
-          <div class="social-container">
-            <p class="follow">присоединяйтесь</p>
-            <ul class="social-links list">
-              <li class="item">
-                <a href="https://www.instagram.com/"
-                  ><svg class="social-icon">
-                    <use href="./img/sprite.svg#icon-instagram"></use></svg
-                ></a>
-              </li>
-              <li class="item">
-                <a href="https://twitter.com/"
-                  ><svg class="social-icon">
-                    <use href="./img/sprite.svg#icon-twitter"></use></svg
-                ></a>
-              </li>
-              <li class="item">
-                <a href="https://www.facebook.com/"
-                  ><svg class="social-icon">
-                    <use href="./img/sprite.svg#icon-facebook"></use></svg
-                ></a>
-              </li>
-              <li class="item">
-                <a href="https://www.linkedin.com/"
-                  ><svg class="social-icon">
-                    <use href="./img/sprite.svg#icon-linkedin"></use></svg
-                ></a>
-              </li>
-            </ul>
+          <div class="tablet-flex-container">
+            <div>
+              <a href="./index.html" class="logo"
+                ><span class="web-logo">Web</span>Studio</a
+              >
+              <ul class="contact-info list">
+                <li class="info">г. Киев, пр-т Леси Украинки, 26</li>
+                <li class="info"><a href="">info@example.com</a></li>
+                <li class="info"><a href="">+38 099 111 11 11</a></li>
+              </ul>
+            </div>
+            <div class="social-container">
+              <p class="follow">присоединяйтесь</p>
+              <ul class="social-links list">
+                <li class="item">
+                  <a href="https://www.instagram.com/"
+                    ><svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-instagram"></use></svg
+                  ></a>
+                </li>
+                <li class="item">
+                  <a href="https://twitter.com/"
+                    ><svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-twitter"></use></svg
+                  ></a>
+                </li>
+                <li class="item">
+                  <a href="https://www.facebook.com/"
+                    ><svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-facebook"></use></svg
+                  ></a>
+                </li>
+                <li class="item">
+                  <a href="https://www.linkedin.com/"
+                    ><svg class="social-icon">
+                      <use href="./img/sprite.svg#icon-linkedin"></use></svg
+                  ></a>
+                </li>
+              </ul>
+            </div>
           </div>
           <div class="subscribe-conteiner">
             <p class="follow">Подпишитесь на рассылку</p>
@@ -367,7 +369,9 @@
     <div class="backdrop is-hidden" data-modal>
       <div class="modal">
         <button class="modal-close-button" data-modal-close>
-          <img src="./img/close.svg" alt="Кнопка закрыть" />
+          <svg class="close-icon" width="17" height="17">
+            <use href="./img/modal-icons.svg#close"></use>
+          </svg>
         </button>
         <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
         <form action="" class="js-contact-form" autocomplete="off">

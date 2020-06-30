@@ -29,6 +29,10 @@
   background-color: $main-background-color;
   border-radius: $radius;
   box-shadow: $shadow;
+
+  @media screen and (min-width: 1200px) {
+    max-width: 528px;
+  }
 }
 
 .modal-close-button {
@@ -42,8 +46,16 @@
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   background-color: $main-background-color;
-  box-shadow: $shadow;
   padding: 0;
+}
+
+.close-icon {
+  fill: currentColor;
+
+  &:hover,
+  &:focus {
+    fill: $hover-color;
+  }
 }
 
 .modal-title {
@@ -53,6 +65,10 @@
   line-height: 1.5;
   letter-spacing: 0.03em;
   color: $secondary-text-color;
+
+  @media screen and (min-width: 1200px) {
+    line-height: 1.15;
+  }
 }
 
 .form-field {
@@ -159,6 +175,11 @@
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.03em;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.71;
+  }
 }
 
 .checkbox-icon {
