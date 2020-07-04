@@ -411,8 +411,12 @@ button {
   }
 }
 
-.main-nav {
+header {
   position: relative;
+  border-bottom: 1px solid #ececec;
+}
+
+.main-nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -424,7 +428,6 @@ button {
 @media screen and (max-width: 767px) {
   .main-nav {
     height: 60px;
-    border-bottom: 1px solid #ececec;
   }
 }
 
@@ -502,6 +505,7 @@ button {
     background-color: #ffffff;
     -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
             box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.16), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 4px 8px rgba(0, 0, 0, 0.04);
+    z-index: 20;
   }
   .button-menu.is-open ~ .menu-container {
     opacity: 1;
@@ -550,6 +554,7 @@ button {
 @media screen and (max-width: 767px) {
   .site-nav .link {
     display: inline-block;
+    padding-bottom: 8px;
     font-size: 18px;
     line-height: 1.17;
   }
@@ -576,7 +581,7 @@ button {
 
 .site-nav .link.current::after {
   position: absolute;
-  bottom: -8px;
+  bottom: 0;
   content: "";
   display: block;
   width: 100%;
@@ -720,12 +725,14 @@ button {
       flex-wrap: wrap;
 }
 
-.container .nav-menu .item:not(:last-child) {
-  margin-right: 8px;
-}
-
 @media screen and (max-width: 767px) {
-  .container .nav-menu .item:nth-child(even) {
+  .container .nav-menu .item:nth-child(-n + 2) {
+    margin-right: 8px;
+  }
+  .container .nav-menu .item:last-child {
+    margin-left: 8px;
+  }
+  .container .nav-menu .item:first-child {
     margin-bottom: 15px;
   }
 }
@@ -735,6 +742,9 @@ button {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+  .container .nav-menu .item:not(:last-child) {
+    margin-right: 8px;
   }
 }
 
@@ -801,6 +811,9 @@ button {
   }
   .project .item:nth-child(odd) {
     margin-right: 30px;
+  }
+  .project .item:last-child {
+    margin-right: 0px;
   }
 }
 
@@ -1027,7 +1040,7 @@ button {
   margin-top: 20px;
 }
 
-.social-links .item {
+.social-links a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1049,7 +1062,8 @@ button {
   margin-right: 10px;
 }
 
-.social-links .item:hover, .social-links.item:focus {
+.social-links a:hover,
+.social-links a:focus {
   background-color: #2196f3;
 }
 

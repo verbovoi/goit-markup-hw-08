@@ -70,15 +70,14 @@
   fill: $social-link-color;
   transition: $main-animation;
 
-  .clients .item:hover &,
-  .clients .item:focus & {
+  .clients .item-link:hover &,
+  .clients .item-link:focus & {
     fill: $hover-color;
   }
 }
 
 .clients .item-link {
   @include flex-align-justify;
-  // width: calc((100% - 2 * 15px) / 2);
   height: 90px;
 
   transition: $main-animation;
